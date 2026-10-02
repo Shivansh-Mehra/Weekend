@@ -1,0 +1,30 @@
+{
+  "name": "build-for-a-friend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test:agent": "tsx run.mjs",
+    "start:reminder": "tsx start-reminder.mjs",
+    "worker": "tsx src/mastra/worker.ts"
+  },
+  "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.70.0",
+    "@mastra/core": "latest",
+    "@mastra/temporal": "latest",
+    "@temporalio/client": "latest",
+    "@temporalio/worker": "latest",
+    "dotenv": "latest",
+    "ollama-ai-provider-v2": "^4.0.1",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
